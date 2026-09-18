@@ -1,0 +1,23 @@
+{
+  "name": "virat-kohli",
+  "version": "1.0.0",
+  "description": "Romantic date-locking app with a Node/Express backend that emails a confirmation via Resend when the final 'Lock it in' button is clicked.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "vercel": "vercel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "nodemailer": "^9.0.5",
+    "resend": "^6.20.0"
+  }
+}
