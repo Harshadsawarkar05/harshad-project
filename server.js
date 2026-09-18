@@ -79,6 +79,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'Palak_edited.html'));
 });
 
+app.get('/health', (req, res) => {
+  res.status(200).json({ ok: true });
+});
+
 app.post('/send-email', async (req, res) => {
   const { vibe, date, time, food, message } = req.body;
 
@@ -133,7 +137,7 @@ app.post('/send-email', async (req, res) => {
 });
 
 if (!process.env.VERCEL) {
-  app.listen(PORT, () => {
+  app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
   });
 }
